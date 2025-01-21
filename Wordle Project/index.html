@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Wordle</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <h1>Wordle</h1>
+      <div id="button-container">
+        <button id="themeToggle" onclick="toggleTheme()">&#9681;</button>
+        <button id="hint-button">&#63;</button>
+        <button id="info-button" onclick="showInfo()">&#9432;</button>
+
+      </div>      
+      <!-- Popup for the hint -->
+      <div id="hint-popup" class="hidden">
+        <div id="hint-content">
+            <span id="hint">No hint.</span>
+            <button id="close-hint">Close</button>
+        </div>
+      </div>
+
+      <!-- Popup for the info -->
+      <div id="info-popup" class="hidden">
+        <div id="info-content">
+          <p id="info-text"></p>
+          <button id="close-info">Close</button>
+        </div>
+      </div>
+
+      <hr id="headerLine">
+      <table id="table">
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+      <h3 id="correct-guess" class="hidden">You Guessed It Right!</h3>
+      <br />
+      <button id="restart-game">Start Over</button>
+    </div>
+
+    <!-- Congratulations medal -->
+    <div id="congratsModal" class="modal">
+      <div class="modal-content">
+        <span id="closeModal" class="close">&times;</span>
+        <p>Congratulations! You've guessed the word!</p>
+        <img src="https://www.icegif.com/wp-content/uploads/2023/05/icegif-107.gif" alt="Congratulations You've Won! :D"/>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; Ashnoor Dhaliwal & Arman Grewal</p>
+    </footer>
+
+    <script src="./wordle.js"></script>
+  </body>
+</html>
